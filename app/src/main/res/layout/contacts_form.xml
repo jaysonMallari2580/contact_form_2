@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <ImageView
+        android:id="@+id/nameIcon"
+        android:layout_width="@dimen/icon_size"
+        android:layout_height="@dimen/icon_size"
+        android:src="@drawable/ic_user"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/name"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="@dimen/icon_margin"
+
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@id/name"
+        android:layout_width="@dimen/text_extra_long_width"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/nameIcon"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/name_hint"
+            android:layout_margin="@dimen/inner_text_field_margin"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--phone-->
+
+    <ImageView
+        android:id="@+id/phoneIcon"
+        android:layout_width="@dimen/icon_size"
+        android:layout_height="@dimen/icon_size"
+        android:src="@drawable/ic_perm_phone_msg_24px"
+        app:layout_constraintTop_toBottomOf="@id/name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/phone"
+        android:layout_margin="@dimen/icon_margin"
+        ></ImageView>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@id/phone"
+        android:layout_width="@dimen/text_long_width"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/name"
+        app:layout_constraintStart_toEndOf="@+id/phoneIcon">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/phone_hint"
+            android:layout_margin="@dimen/inner_text_field_margin"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/area"
+        android:layout_width="@dimen/text_shortest_width"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/name"
+        app:layout_constraintStart_toEndOf="@+id/phone">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Area"
+            android:inputType="none"
+
+            android:layout_margin="@dimen/inner_text_field_margin"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <!--address-->
+
+    <ImageView
+        android:id="@+id/addressIcon"
+        android:layout_width="@dimen/icon_size"
+        android:layout_height="@dimen/icon_size"
+        android:src="@drawable/ic_room_24px"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/address"
+        app:layout_constraintTop_toBottomOf="@id/phone"
+        android:layout_margin="@dimen/icon_margin"
+
+        ></ImageView>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@id/address"
+        android:layout_width="@dimen/text_extra_long_width"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/addressIcon"
+        app:layout_constraintTop_toBottomOf="@id/phone">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/address_hint"
+            android:layout_margin="@dimen/inner_text_field_margin"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--City-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/city"
+        android:layout_width="@dimen/text_extra_long_width"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toBottomOf="@id/address"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/city_hint"
+            android:layout_margin="@dimen/inner_text_field_margin"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--State and Zip-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/state"
+        android:layout_width="@dimen/text_mid_size_width"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/city"
+        app:layout_constraintEnd_toStartOf="@+id/zip">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/state_hint"
+            android:layout_margin="@dimen/inner_text_field_margin" />
+
+    </com.google.android.material.textfield.TextInputLayout>>
+
+    <!--City-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/zip"
+        android:layout_width="@dimen/text_mid_size_width"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/city"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/zip_hint"
+            android:layout_margin="@dimen/inner_text_field_margin"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--email-->
+
+    <ImageView
+        android:id="@+id/emailIcon"
+        android:layout_width="@dimen/icon_size"
+        android:layout_height="@dimen/icon_size"
+        android:src="@drawable/ic_mark_as_unread_24px"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/email"
+        app:layout_constraintTop_toBottomOf="@id/state"
+        android:layout_margin="@dimen/icon_margin"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@id/email"
+        android:layout_width="@dimen/text_extra_long_width"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/emailIcon"
+        app:layout_constraintTop_toBottomOf="@id/state">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/email_hint"
+            android:layout_margin="@dimen/inner_text_field_margin" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--Date-->
+
+    <ImageView
+        android:id="@+id/birthdayIcon"
+        android:layout_width="@dimen/icon_size"
+        android:layout_height="@dimen/icon_size"
+        android:src="@drawable/ic_cake_24px"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/birthday"
+        app:layout_constraintTop_toBottomOf="@id/email"
+        android:layout_margin="@dimen/icon_margin"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@id/birthday"
+        android:layout_width="@dimen/text_extra_long_width"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/birthdayIcon"
+        app:layout_constraintTop_toBottomOf="@id/email">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/birthday_hint"
+            android:layout_margin="@dimen/inner_text_field_margin"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

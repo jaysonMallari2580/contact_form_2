@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--ICON-->
+    <dimen name="icon_size">40dp</dimen>
+    <dimen name="icon_margin">30dp</dimen>
+    <dimen name="icon_margin_bottom">90dp</dimen>
+
+    <!-- EDIT TEXT -->
+    <dimen name="text_extra_long_width">340dp</dimen>
+    <dimen name="text_mid_size_width">170dp</dimen>
+    <dimen name="text_long_width">200dp</dimen>
+    <dimen name="text_shortest_width">140dp</dimen>
+
+    <!-- Text Field -->
+    <dimen name="inner_text_field_margin">20dp</dimen>
+
+</resources>
